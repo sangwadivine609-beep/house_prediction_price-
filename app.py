@@ -18,8 +18,8 @@ st.title("🏠 House Price Regression Prediction")
 st.write("Fill in the details below to predict the estimated house price:")
 
 # User Inputs
-area = st.number_input("area", value=0.0)
-rooms = st.number_input("rooms", value=0.0)
+area = st.number_input("area", value=2014)
+rooms = st.number_input("rooms", value=3)
 
 
 
@@ -32,4 +32,5 @@ if st.button("Predict"):
     prediction = model.predict(input_data)
 
     # Show result
+
     st.success(f"💰 Predicted House Price: ${prediction[0]:,.2f}")
